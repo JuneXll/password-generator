@@ -90,6 +90,7 @@ function generatePassword() {
       break;
     }
   }
+  
   passwordArray=passwordArray.splice((userLength-1),(userLength*1));
   passwordArray= passwordArray.join('');
   return passwordArray;
