@@ -1,17 +1,17 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+// // Assignment Code
+// var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
 
 
 
@@ -40,27 +40,60 @@ var upperCase = confirm("Would you like to have uppercase letters in your passwo
 console.log(upperCase);
 var numbers = confirm("Would you like to have numbers in your password?");
 console.log(numbers);
-var specialChar = confirm("Would you like the following special characters in your password? (#, !, *, -)");
+var specialChar = confirm("Would you like the following special characters in your password? (!@#$%^&*)");
 console.log(specialChar);
 
 // Create random password
-// var pwChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789#!*-"]
-// function generateRandomNumber(maxValue){
-//   var randomNumber = Math.random();
-//   var result = Math.floor(randomNumber*maxValue);
-//   return result;
+var alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];//uppercase
+var numeric = [0,1,2,3,4,5,6,7,8,9];
+var special = ["!","@","#","$","%","^","&","*"];
+
+function generateRandomNumber(userLength){
+  var randomNumber = Math.random();
+  var result = Math.floor(randomNumber*userLength);
+  return result;
+}
+
+// Character randomization
+var randomAlpha = generateRandomNumber(alpha.length);
+var randomLetter = alpha[randomAlpha];
+console.log(randomLetter);
+
+var randomCapAlpha = generateRandomNumber(alpha.length);
+var randomCapLetter = alpha[randomCapAlpha].toUpperCase();
+console.log(randomCapLetter);
+
+var randomNum = generateRandomNumber(numeric.length);
+var randomNumberPW = numeric[randomNum];
+console.log(randomNumberPW);
+
+var randomSpecial = generateRandomNumber(special.length);
+var randomSpecialPW = special[randomSpecial];
+console.log(randomSpecialPW);
+
+// Add character randomization to password
+
+// function generatePassword() {
+  var passwordArray =[];
+  while(passwordArray.length < userLength){
+    if (lowerCase===true){
+      passwordArray.push(randomLetter);
+    } 
+    if(upperCase===true){
+      passwordArray.push(randomCapLetter);
+    }
+    if (numbers===true){
+      passwordArray.push(randomNumberPW);
+    }
+    if(specialChar===true){
+      passwordArray.push(randomSpecialPW);
+    }
+    console.log(passwordArray);
+    i++;
+  }
 // }
 
-// var randomPosition = generateRandomNumber(pwChar.length);
-// var randomLetter = pwChar[randomPosition];
+// console.log(generatePassword());
 
-// function randomElementFromArray(array){
-//   var randomPosition=generateRandomNumber(array.length);
-//   return array[randomPosition];
-// }
-// randomElementFromArray(array);
-
-// Confirm that at least one character type has been picked
 // Password is generated and shows on page
-//
 
