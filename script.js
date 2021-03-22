@@ -61,19 +61,16 @@ function generatePassword() {
   for (var j=0; j < userLength;j++){
     var randomAlpha = generateRandomNumber(alpha.length);
     var randomLetter = alpha[randomAlpha];
-    console.log(randomLetter);
 
     var randomCapAlpha = generateRandomNumber(alpha.length);
     var randomCapLetter = alpha[randomCapAlpha].toUpperCase();
-    console.log(randomCapLetter);
 
     var randomNum = generateRandomNumber(numeric.length);
     var randomNumberPW = numeric[randomNum];
-    console.log(randomNumberPW);
 
     var randomSpecial = generateRandomNumber(special.length);
     var randomSpecialPW = special[randomSpecial];
-    console.log(randomSpecialPW);
+    
     if (lowerCase===true){
       passwordArray.push(randomLetter);
     } 
@@ -90,7 +87,7 @@ function generatePassword() {
       break;
     }
   }
-  
+
   passwordArray=passwordArray.splice((userLength-1),(userLength*1));
   passwordArray= passwordArray.join('');
   return passwordArray;
