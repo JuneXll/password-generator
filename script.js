@@ -13,6 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
 // Character randomization
 // Add character randomization to password
 function generatePassword() {
@@ -20,20 +21,18 @@ function generatePassword() {
   var userLength = 0;
   var validLength = true;
   
-  for (var i=0; validLength; i++){
-  var userLength = prompt("Choose a password length between 8 and 128 characters.")
-  if((userLength < 8) || (userLength > 128)){
-  alert("Your password is not between the right parameters, please choose a length between 8 and 128 characters.");
-  console.log(userLength);
-  } else if(isNaN(userLength)===true){
-  alert("Please choose a valid number between 8 and 128");
-  console.log(userLength);
-  } else {
+  for (var i=0; validLength; i++){  
+    var userLength = prompt("Choose a password length between 8 and 128 characters.")
+    if((userLength < 8) || (userLength > 128)){
+    alert("Your password is not between the right parameters, please choose a length between 8 and 128 characters.");
+    console.log(userLength);
+    } else if(isNaN(userLength)===true){
+    alert("Please choose a valid number between 8 and 128");
+    console.log(userLength);
+    } else {
     break;
-  }
+    }
   } 
-
- console.log(userLength);
 
  // Ask character types=>lowercase, uppercase, numeric and/or special characters
  var lowerCase = confirm("Would you like to have lowercase letters in your password?");
@@ -93,7 +92,6 @@ function generatePassword() {
   return passwordArray;
 }
 
-console.log(generatePassword());
 
 // Password is generated and shows on page
 
