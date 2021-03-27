@@ -30,3 +30,6 @@
 #Once all questions have been answered, the password generator will generate your safe password:
 <img width="1124" alt="Password-generated" src="https://user-images.githubusercontent.com/71652307/112057265-70f8a800-8b2f-11eb-9ae9-7f9e4a535a19.png">
 
+Link for Password-Generator:
+https://junexll.github.io/password-generator/
+
